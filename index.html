@@ -7,7 +7,7 @@
     <title>SpiceVerse{}</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../css/sign.css">
+    <link rel="stylesheet" href="css/sign.css">
 </head>
 
 <body>
@@ -75,11 +75,11 @@
         </div>
     </div>
 </body>
-<script src="../assets/plugins/jquery/jquery.min.js"></script>
+<script src="assets/plugins/jquery/jquery.min.js"></script>
 <!-- Bootstrap 4 -->
-<script src="../assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- AdminLTE App -->
-<script src="../assets/dist/js/adminlte.min.js"></script>
+<script src="assets/dist/js/adminlte.min.js"></script>
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <script>
      $(document).ready(function () {
@@ -114,7 +114,7 @@ $('#Login').click(function (e) {
             text: "Login  Successful",
             icon: "success",
           }).then(function(){
-            window.location.href='../index.php'
+            window.location.href='farmers/dashboard.php'
           })
           
         }else if(response==402){
@@ -194,7 +194,7 @@ $('#register').click(function (e) {
                   text: "Registration Successful",
                   icon: "success",
                 }).then(function(){
-                  window.location.href='index.html'
+                  window.location.href='farmers/dashboard.php'
                 })
                 
               }else if (response==401){

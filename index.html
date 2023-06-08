@@ -19,11 +19,11 @@
             <div class="login-form">
                 <div class="sign-in-htm">
                     <div class="group">
-                        <label for="user" class="label">email</label>
-                        <input id="emalLogin" type="email" class="input">
+                        <label for="emailLogin" class="label">email</label>
+                        <input id="emailLogin" type="email" class="input">
                     </div>
                     <div class="group">
-                        <label for="pass" class="label">Password</label>
+                        <label for="passlogin" class="label">Password</label>
                         <input id="passlogin" type="password" class="input" data-type="password">
                     </div>
                     <div class="group">
@@ -88,7 +88,7 @@
 $('#Login').click(function (e) {
   e.preventDefault();
   var email = $('#emailLogin').val().trim();
-  var pword = $('#pwordLogin').val().trim();
+  var pword = $('#passlogin').val().trim();
   if (email == "" || pword == "") {
     swal({
             text: "Input field cannot be empty",
@@ -160,7 +160,7 @@ $('#register').click(function (e) {
         var price=$('#price').val().trim();
         var pword = $('#pword').val().trim();
         var cpword = $('#cpword').val().trim();
-        if (fname == "" || lname == "" || shopNo == "" || bName == "" || phoneNo == "" || email == "" || pword == "") {
+        if (fname == "" || lname == "" || spice == "" || email == "" || price == "" || cpword == "" || pword == "") {
           swal({
                   text: "Input field cannot be empty",
                   icon: "error",

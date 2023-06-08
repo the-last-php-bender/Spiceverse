@@ -1,15 +1,10 @@
 <?php
-    // session_start();
-    // include 'backend/data/functions.php';
-    // if(!$_SESSION['email']){
-    //   header('location:dashboard.html');
-    // }
-    // $user=new User();
-    // $session=$_SESSION['email'];
-    // $select_user=$user->select_user();
-    // $execute_user=$select_user->execute([$session]);
-    // $fetch_user=$select_user->fetch();
-    // extract($fetch_user)
+    session_start();
+    include 'backend/data/functions.php';
+    if(!$_SESSION['email']){
+      header('location:../index.html');
+    }
+
 ?>
 <!DOCTYPE html>
 <html class="no-js">
@@ -22,17 +17,17 @@
 		<!-- CSS
         ================================================ -->
         <!-- Owl Carousel -->
-		<link rel="stylesheet" href="css/owl.carousel.css">
+		<link rel="stylesheet" href="../css/owl.carousel.css">
         <!-- bootstrap.min css -->
-		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="../css/bootstrap.min.css">
         <!-- Font-awesome.min css -->
-		<link rel="stylesheet" href="css/font-awesome.min.css">
+		<link rel="stylesheet" href="../css/font-awesome.min.css">
         <!-- Main Stylesheet -->
-        <link rel="stylesheet" href="css/animate.min.css">
+        <link rel="stylesheet" href="../css/animate.min.css">
 
-		<link rel="stylesheet" href="css/main.css">
+		<link rel="stylesheet" href="../css/main.css">
         <!-- Responsive Stylesheet -->
-		<link rel="stylesheet" href="css/responsive.css">
+		<link rel="stylesheet" href="../css/responsive.css">
 		<!-- Js -->
     <script src="js/vendor/modernizr-2.6.2.min.js"></script>
     <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> -->
@@ -49,7 +44,7 @@
 	header-img start 
 	============================== -->
     <section id="hero-area">
-      <img class="img-responsive" src="images/header.jpg" alt="">
+      <img class="img-responsive" src="../images/header.jpg" alt="">
     </section>
 	<!--
     Header start 
@@ -105,28 +100,28 @@
                         </div>
                         <div id="owl-example" class="owl-carousel">
                             <div>
-                                <img class="img-responsive" src="images/slider/slider-img-1.jpg" alt="">
+                                <img class="img-responsive" src="../images/slider/slider-img-1.jpg" alt="">
                             </div>
                             <div>
-                                <img class="img-responsive" src="images/slider/slider-img-2.jpg" alt="">
+                                <img class="img-responsive" src="../images/slider/slider-img-2.jpg" alt="">
                             </div>
                             <div>
-                                <img class="img-responsive" src="images/slider/slider-img-3.jpg" alt="">
+                                <img class="img-responsive" src="../images/slider/slider-img-3.jpg" alt="">
                             </div>
                             <div>
-                                <img class="img-responsive" src="images/slider/slider-img-4.jpg" alt="">
+                                <img class="img-responsive" src="../images/slider/slider-img-4.jpg" alt="">
                             </div>
                             <div>
-                                <img class="img-responsive" src="images/slider/slider-img-1.jpg" alt="">
+                                <img class="img-responsive" src="../images/slider/slider-img-1.jpg" alt="">
                             </div>
                             <div>
-                                <img class="img-responsive" src="images/slider/slider-img-2.jpg" alt="">
+                                <img class="img-responsive" src="../images/slider/slider-img-2.jpg" alt="">
                             </div>
                             <div>
-                                <img class="img-responsive" src="images/slider/slider-img-3.jpg" alt="">
+                                <img class="img-responsive" src="../images/slider/slider-img-3.jpg" alt="">
                             </div>
                             <div>
-                                <img class="img-responsive" src="images/slider/slider-img-4.jpg" alt="">
+                                <img class="img-responsive" src="../images/slider/slider-img-4.jpg" alt="">
                             </div>
                         
                         </div>
@@ -158,23 +153,23 @@
     <section id="product">
         <div class=main-container>
             <div class="img">
-                <img class="picture" src="images/blog/blog-img-1.jpg" alt="Equipments">
+                <img class="picture" src="../images/blog/blog-img-1.jpg" alt="Equipments">
             </div>
 
             <div class="img">
-                <img class="picture" src="images/blog/blog-img-2.jpg" alt="Equipments">
+                <img class="picture" src="../images/blog/blog-img-2.jpg" alt="Equipments">
             </div>
             <div class="img">
-                <img class="picture" src="images/blog/blog-img-3.jpg" alt="Equipments">
+                <img class="picture" src="../images/blog/blog-img-3.jpg" alt="Equipments">
             </div>
             <div class="img">
-                <img class="picture" src="images/blog/blog-img-4.jpg" alt="Equipments">
+                <img class="picture" src="../images/blog/blog-img-4.jpg" alt="Equipments">
             </div>
             <div class="img">
-                <img class="picture" src="images/blog/blog-img-5.jpg" alt="Equipments">
+                <img class="picture" src="../images/blog/blog-img-5.jpg" alt="Equipments">
             </div>
             <div class="img">
-                <img class="picture" src="images/blog/blog-img-6.jpg" alt="Equipments">
+                <img class="picture" src="../images/blog/blog-img-6.jpg" alt="Equipments">
             </div>
         </div>
     </section><!-- #blog close -->
@@ -183,11 +178,39 @@
     ============================ -->
     <section id="farmers">
         <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    
-                </div><!-- .col-md-12 close -->
-            </div><!-- .row close -->
+            <div class="title" >
+                <h3 style="text-align:center">Meet Spice verse<span> Farmers</span></h3>
+            </div>
+            <table class="table">
+                <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Spice Name</th>
+                <th>price </th>
+                <th>Contact Farmer</th>
+            </tr>
+            <tr>
+                <?php
+                $query="SELECT * FROM spicetb";
+                $user=new User();
+                $session=$_SESSION['email'];
+                $select_user=$user->select_user();
+                $execute_user=$select_user->execute([$session]);
+                while($row=$select_user->fetch()){
+                    $firstname=$row['firstname'];
+                    $lastname=$row['lastname'];
+                    $spicename=$row['spicename'];
+                    $price=$row['price'];
+                    $email=$row['email'];
+                    echo "<td>$firstname</td>
+                    <td>$lastname</td>
+                    <td>$spicename</td>
+                    <td>$price</td>
+                    <td><a href='mailto:$email'>Send Email</a></td>";
+                } 
+                ?>
+            </tr>
+            </table>
         </div><!-- .containe close -->
     </section><!-- #price close -->
     <!--
@@ -297,16 +320,16 @@
                             <h3>PHOTO <span>STREAM</span></h3>
                             <ul>
                                 <li>
-                                    <a href="#"><img src="images/photo/photo-1.jpg" alt=""></a>
+                                    <a href="#"><img src="../images/photo/photo-1.jpg" alt=""></a>
                                 </li>
                                 <li>
-                                    <a href="#"><img src="images/photo/photo-2.jpg" alt=""></a>
+                                    <a href="#"><img src="../images/photo/photo-2.jpg" alt=""></a>
                                 </li>
                                 <li>
-                                    <a href="#"><img src="images/photo/photo-3.jpg" alt=""></a>
+                                    <a href="#"><img src="../images/photo/photo-3.jpg" alt=""></a>
                                 </li>
                                 <li>
-                                    <a href="#"><img src="images/photo/photo-4.jpg" alt=""></a>
+                                    <a href="#"><img src="../images/photo/photo-4.jpg" alt=""></a>
                                 </li>
                             </ul>
                         </div>

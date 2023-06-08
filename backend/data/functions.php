@@ -20,7 +20,7 @@ class User
     public function login_user()
  {
         $this->processQuery = new processQuery();
-        $this->query = 'SELECT * FROM spicetb WHERE email=?';
+        $this->query = "SELECT * FROM spicetb WHERE email=?";
         $this->execute = $this->processQuery->query( $this->query );
         return $this->execute;
 
@@ -29,6 +29,12 @@ class User
     public function hash( $password ) {
         $hash = password_hash( $password, PASSWORD_DEFAULT );
         return $hash;
+    }
+    public function select_user(){
+        $this->processQuery = new processQuery();
+        $this->query = "SELECT * FROM spicetb";
+        $this->execute = $this->processQuery->query( $this->query );
+        return $this->execute;
     }
 }
 ?>

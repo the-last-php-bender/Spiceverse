@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>SpiceVerse{}</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/sign.css">
+</head>
+
+<body>
+    <div class="login-wrap">
+        <div class="login-html">
+            <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Sign
+                In</label>
+            <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Sign Up</label>
+            <div class="login-form">
+                <div class="sign-in-htm">
+                    <div class="group">
+                        <label for="user" class="label">email</label>
+                        <input id="emalLogin" type="email" class="input">
+                    </div>
+                    <div class="group">
+                        <label for="pass" class="label">Password</label>
+                        <input id="passlogin" type="password" class="input" data-type="password">
+                    </div>
+                    <div class="group">
+                        <input id="check" type="checkbox" class="check" checked>
+                        <label for="check"><span class="icon"></span> Keep me Signed in</label>
+                    </div>
+                    <div class="group">
+                        <input type="submit" class="button"  id ="login" value="Sign In">
+                    </div>
+                </div>
+                <div class="sign-up-htm">
+                    <div class="group">
+                        <label for="fname" class="label">First Name</label>
+                        <input id="fname" type="text" class="input">
+                    </div>
+                    <div class="group">
+                        <label for="lname" class="label">Last name</label>
+                        <input id="lname" type="text" class="input">
+                    </div>
+                    <div class="group">
+                        <label for="sname" class="label">Spice Name</label>
+                        <input id="sname" type="text" class="input">
+                    </div>
+                    <div class="group">
+                        <label for="email" class="label">email</label>
+                        <input id="email" type="email" class="input">
+                    </div>
+                    <div class="group">
+                        <label for="price" class="label">Price</label>
+                        <input id="price" type="number" class="input">
+                    </div>
+                    <div class="group">
+                        <label for="pass" class="label">Password</label>
+                        <input id="pass" type="password" class="input">
+                    </div>
+                    <div class="group">
+                      <label for="cpass" class="label">Confirm Password</label>
+                      <input id="cpass" type="password" class="input">
+                  </div>
+                    <div class="group">
+                        <input type="submit" class="button" id ="register" value="Sign Up">
+                    </div>
+                    <div class="hr"></div>
+                    <div class="foot-lnk">
+                        <label for="tab-1">Already A Member?</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="../assets/plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="../assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- AdminLTE App -->
+<script src="../assets/dist/js/adminlte.min.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script>
+     $(document).ready(function () {
+
+
+$('#Login').click(function (e) {
+  e.preventDefault();
+  var email = $('#emailLogin').val().trim();
+  var pword = $('#pwordLogin').val().trim();
+  if (email == "" || pword == "") {
+    swal({
+            text: "Input field cannot be empty",
+            icon: "error",
+          })
+  } else {
+    $.ajax({
+      method: 'POST',
+      url: 'backend/control/login.php',
+      data: {
+        email: email,
+        pword: pword
+      },
+      beforeSend: function () {
+        $('#Login').attr('disabled', true)
+        $('#Login').text('Logging...');
+      },
+      success: function (response) {
+        if (response == 200) {
+          $('#Login').attr('disabled', false);
+          $('#Login').text('Login');
+          swal({
+            text: "Login  Successful",
+            icon: "success",
+          }).then(function(){
+            window.location.href='../index.php'
+          })
+          
+        }else if(response==402){
+           $('#Login').attr('disabled', false);
+          $('#Login').text('Login');
+          swal({
+            text: "Incorrect Email",
+            icon: "error",
+          })
+        }else if(response==400){
+           $('#Login').attr('disabled', false);
+          $('#Login').text('Login');
+          swal({
+            text: "Incorrect Password",
+            icon: "error",
+          })
+        }else{
+          $('#Login').attr('disabled', false);
+          swal({
+            text: "An error occured",
+            icon: "error",
+          })
+        }
+      },
+      error: function () {
+        $('#Login').attr('disabled', false);
+          swal({
+            text: "Check your internet connection",
+            icon: "error",
+          })
+      }
+    })
+  }
+
+})
+// Implement register
+$('#register').click(function (e) {
+        e.preventDefault();
+        var fname = $('#fname').val().trim();
+        var lname = $('#lname').val().trim();
+        var spice =$('#sname').val().trin();
+        var email = $('#email').val().trim();
+        var price=$('#price').val().trim();
+        var pword = $('#pword').val().trim();
+        var cpword = $('#cpword').val().trim();
+        if (fname == "" || lname == "" || shopNo == "" || bName == "" || phoneNo == "" || email == "" || pword == "") {
+          swal({
+                  text: "Input field cannot be empty",
+                  icon: "error",
+                })
+        }else if(pword!==cpword){
+          swal({
+                  text: "Password does not Match",
+                  icon: "Warning",
+                })
+        } else {
+          $.ajax({
+            method: 'POST',
+            url: 'backend/control/register.php',
+            data: {
+              fname: fname,
+              lname: lname,
+              spice:spice,
+              email:email,
+              price:price,
+              pword:pwrod
+            },
+            beforeSend: function () {
+              $('#register').attr('disabled', true)
+              $('#register').text('Loading...');
+            },
+            success: function (response) {
+              if (response == 200) {
+                $('#register').attr('disabled', false);
+                $('#register').text('Register');
+                swal({
+                  text: "Registration Successful",
+                  icon: "success",
+                }).then(function(){
+                  window.location.href='index.html'
+                })
+                
+              }else if (response==401){
+                $('#register').attr('disabled', false);
+                $('#register').text('Register');
+                swal({
+                  title:"Warning!!!",
+                  text: "Email already exist",
+                  icon: "warning",
+                })
+              }else{
+                $('#register').attr('disabled', false);
+                swal({
+                  text: "An error occured",
+                  icon: "error",
+                })
+              }
+            },
+            error: function () {
+              $('#register').attr('disabled', false);
+                swal({
+                  text: "Check Your internet connection",
+                  icon: "error",
+                })
+            }
+          })
+        }
+
+      })
+})
+    </script>
+</html>

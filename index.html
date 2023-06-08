@@ -158,8 +158,8 @@ $('#register').click(function (e) {
         var spice =$('#sname').val().trim();
         var email = $('#email').val().trim();
         var price=$('#price').val().trim();
-        var pword = $('#pword').val().trim();
-        var cpword = $('#cpword').val().trim();
+        var pword = $('#pass').val().trim();
+        var cpword = $('#cpass').val().trim();
         if (fname == "" || lname == "" || spice == "" || email == "" || price == "" || cpword == "" || pword == "") {
           swal({
                   text: "Input field cannot be empty",

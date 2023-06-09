@@ -1,6 +1,5 @@
 <?php
 // Remember using sha1 here dont forget 
-
 session_start();
 include "../data/functions.php";
 	$firstName=$_GET['fname'];

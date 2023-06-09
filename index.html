@@ -1,231 +1,387 @@
 <!DOCTYPE html>
 <html class="no-js">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>SpiceVerse</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- CSS
+        ================================================ -->
+        <!-- Owl Carousel -->
+		<link rel="stylesheet" href="css/owl.carousel.css">
+        <!-- bootstrap.min css -->
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+        <!-- Font-awesome.min css -->
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+        <!-- Main Stylesheet -->
+        <link rel="stylesheet" href="css/animate.min.css">
 
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>SpiceVerse{}</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/sign.css">
-</head>
+		<link rel="stylesheet" href="css/main.css">
+        <!-- Responsive Stylesheet -->
+		<link rel="stylesheet" href="css/responsive.css">
+		<!-- Js -->
+    <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+    <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> -->
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+    <script src="js/jquery.nav.js"></script>
+    <script src="js/jquery.sticky.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/main.js"></script>
+	</head>
+	<body>
+	<!--
+	header-img start 
+	============================== -->
+    <section id="hero-area" style="width:100%; height=100vh">
+      <img class="img-responsive" width=100% height=100% src="images/header.jpg" alt="">
+    </section>
+	<!--
+    Header start 
+	============================== -->
+	<nav id="navigation">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="block">
+                        <nav class="navbar navbar-default">
+                          <div class="container-fluid">
+                            <!-- Brand and toggle get grouped for better mobile display -->
+                            <div class="navbar-header">
+                              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                              </button>
+                                  <a class="navbar-brand" href="#">
+                                    <h1>SpiceVerse</h1>
+                                  </a>
 
-<body>
-    <div class="login-wrap">
-        <div class="login-html">
-            <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Sign
-                In</label>
-            <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Sign Up</label>
-            <div class="login-form">
-                <div class="sign-in-htm">
-                    <div class="group">
-                        <label for="emailLogin" class="label">email</label>
-                        <input id="emailLogin" type="email" class="input">
+                            </div>
+
+                            <!-- Collect the nav links, forms, and other content for toggling -->
+                            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                              <ul class="nav navbar-nav navbar-right" id="top-nav">
+                                <li><a href="#hero-area">Home</a></li>
+                                <li><a href="#about-us">About us</a></li>
+                                <li><a href="#product">Blog</a></li>
+                                <li><a href="#farmers">Farmers</a></li>
+                                <li><a href="#contact-us">contacts</a></li>
+                              </ul>
+                            </div><!-- /.navbar-collapse -->
+                          </div><!-- /.container-fluid -->
+                        </nav>
                     </div>
-                    <div class="group">
-                        <label for="passlogin" class="label">Password</label>
-                        <input id="passlogin" type="password" class="input" data-type="password">
+                </div><!-- .col-md-12 close -->
+            </div><!-- .row close -->
+        </div><!-- .container close -->
+	</nav><!-- header close -->
+    <!--
+    Slider start
+    ============================== -->
+    <section id="slider">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="block wow fadeInUp" data-wow-duration="500ms" data-wow-delay="300ms">
+                        <div class="title">
+                            <h3>Featured <span>Works</span></h3>
+                        </div>
+                        <div id="owl-example" class="owl-carousel">
+                            <div>
+                                <img class="img-responsive" src="images/slider/slider-img-1.jpg" alt="">
+                            </div>
+                            <div>
+                                <img class="img-responsive" src="images/slider/slider-img-2.jpg" alt="">
+                            </div>
+                            <div>
+                                <img class="img-responsive" src="images/slider/slider-img-3.jpg" alt="">
+                            </div>
+                            <div>
+                                <img class="img-responsive" src="images/slider/slider-img-4.jpg" alt="">
+                            </div>
+                            <div>
+                                <img class="img-responsive" src="images/slider/slider-img-1.jpg" alt="">
+                            </div>
+                            <div>
+                                <img class="img-responsive" src="images/slider/slider-img-2.jpg" alt="">
+                            </div>
+                            <div>
+                                <img class="img-responsive" src="images/slider/slider-img-3.jpg" alt="">
+                            </div>
+                            <div>
+                                <img class="img-responsive" src="images/slider/slider-img-4.jpg" alt="">
+                            </div>
+                        
+                        </div>
                     </div>
-                    <div class="group">
-                        <input id="check" type="checkbox" class="check" checked>
-                        <label for="check"><span class="icon"></span> Keep me Signed in</label>
+                </div><!-- .col-md-12 close -->
+            </div><!-- .row close -->
+        </div><!-- .container close -->
+    </section><!-- slider close -->
+    <!--
+    about-us start
+    ============================== -->
+    <section id="about-us">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="block">
+                        <img class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="400ms" style="border-radius: 50%;" src="images/blog/blog-img-2.jpg" alt="cooker-img">
+                        <h1 class="heading wow fadeInUp" data-wow-duration="400ms" data-wow-delay="500ms">No 1<span></span> </br> SpiceVerse <span>Company</span>
+                        </h1>
+                        <p class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="600ms">A Nigeria Company  Revolutionarizing the spice industry in Nigeria! </br> 
                     </div>
-                    <div class="group">
-                        <input type="submit" class="button"  id ="Login" value="Sign In">
+                </div><!-- .col-md-12 close -->
+            </div><!-- .row close -->
+        </div><!-- .containe close -->
+    </section><!-- #call-to-action close -->
+    <!--
+    blog start
+    ============================ -->
+    <section id="product">
+            <div class="title" >
+                <h3 style="text-align:center;color:white;">Our <span>Products</span></h3>
+            </div>
+        <div class=main-container>
+            <div class="img">
+                <img class="picture" src="images/blog/blog-img-1.jpg" alt="Equipments">
+            </div>
+
+            <div class="img">
+                <img class="picture" src="images/blog/blog-img-2.jpg" alt="Equipments">
+            </div>
+            <div class="img">
+                <img class="picture" src="images/blog/blog-img-3.jpg" alt="Equipments">
+            </div>
+            <div class="img">
+                <img class="picture" src="images/blog/blog-img-4.jpg" alt="Equipments">
+            </div>
+            <div class="img">
+                <img class="picture" src="images/blog/blog-img-5.jpg" alt="Equipments">
+            </div>
+            <div class="img">
+                <img class="picture" src="images/blog/blog-img-6.jpg" alt="Equipments">
+            </div>
+        </div>
+    </section><!-- #blog close -->
+    <!--
+    price start
+    ============================ -->
+    <section id="farmers">
+        <div class="container">
+            <div class="title" >
+                <h3 style="text-align:center">Meet Spice verse<span> Farmers</span></h3>
+            </div>
+            <table class="table">
+                <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Spice Name</th>
+                <th>price </th>
+                <th>Contact Farmer</th>
+            </tr>
+            <tr>
+            <th>Emmanuel</th>
+                <th>David</th>
+                <th>Garlic Pepper</th>
+                <th>2500 </th>
+                <th>+234 7001262727</th>
+            </tr>
+            <th>Seyi</th>
+                <th>Jude</th>
+                <th>Chilly Pepper</th>
+                <th>2000 </th>
+                <th>+234 7012525225</th>
+            </tr>
+            <th>John </th>
+                <th>Emeka</th>
+                <th>Cinnamon</th>
+                <th>4000 </th>
+                <th>+234 8127475477</th>
+            </tr>
+            <th>Juliet</th>
+                <th>Brown</th>
+                <th>Oregano</th>
+                <th>4000 </th>
+                <th>+234 9126465759</th>
+            </tr>
+            <th>Ebenezer</th>
+                <th>Daniel</th>
+                <th>Black Pepper</th>
+                <th>3000 </th>
+                <th>+234 8023078806</th>
+            </tr>
+            </table>
+        </div><!-- .containe close -->
+    </section><!-- #price close -->
+    <!--
+    subscribe start
+    ============================ -->
+    <!-- IMPLEMENTING THE FARMERS TABLE HERE  -->
+    
+    <section id="subscribe">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="block">
+                        <h1 class=" heading wow fadeInUp" data-wow-duration="300ms" data-wow-delay="300ms"> SUBSCRIBE <span>to our</span> NEWSLETTER</h1>
+                        <h3 style="color:white;"class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="400ms">We'll give you just the right amount of love! </h3>
+                        <p class="wow fadeInUp" data-wow-duration="300ms"data-wow-delay="400ms">Sign up for our weekly update and be the first to know about our specials and promotinns</p>
+                        <p class="wow fadeInUp" data-wow-duration="300ms"data-wow-delay="400ms">No Spam, we promise </p>
+                        <form class="form-inline">
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" id="exampleInputAmount" placeholder="Enter your email to subscribe...">
+                                    <div class="input-group-addon">
+                                        <button class="btn btn-default" type="submit">subscribe</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div><!-- .col-md-12 close -->
+            </div><!-- .row close -->
+        </div><!-- .containe close -->
+    </section><!-- #subscribe close -->
+    <!--
+    CONTACT US  start
+    ============================= -->
+    <section id="contact-us">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="block">
+                        <h1 class="heading wow fadeInUp" data-wow-duration="500ms" data-wow-delay="300ms"><span>CONTACT US</span></h1>
+                        <h3 class="title wow fadeInLeft" data-wow-duration="500ms" data-wow-delay="300ms">Sign Up for <span>Email Alerts</span> </h3>
+                        <form>
+                            <div class="form-group wow fadeInDown" data-wow-duration="500ms" data-wow-delay="600ms">
+                                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Write your full name here...">
+                            </div>
+                            <div class="form-group wow fadeInDown" data-wow-duration="500ms" data-wow-delay="800ms">
+                                <input type="text" class="form-control" placeholder="Write your email address here...">
+                            </div>
+                            <div class="form-group wow fadeInDown" data-wow-duration="500ms" data-wow-delay="1000ms">
+                                <textarea class="form-control" rows="3" placeholder="Write your message here..."></textarea>
+                            </div>
+                        </form>
+                        <a class="btn btn-default wow bounceIn" data-wow-duration="500ms" data-wow-delay="1300ms" href="#" role="button">send your message</a>
+                    </div>
+                </div><!-- .col-md-12 close -->
+            </div><!-- .row close -->
+        </div><!-- .container close -->
+    </section><!-- #contact-us close -->
+    <!--
+    footer  start
+    ============================= -->
+    <section id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="block wow fadeInLeft"  data-wow-delay="200ms">
+                        <h3>CONTACT <span>INFO</span></h3>
+                        <div class="info">
+                            <ul>
+                                <li>
+                                  <h4><i class="fa fa-phone"></i>Telephone</h4>
+                                  <p>+2347012656933</p>
+				                    <p>+237018146587</p>
+                                    
+                                </li>
+                                <li>
+                                  <h4><i class="fa fa-map-marker"></i>Address</h4>
+                                  <p> Lagos, Nigeria</p>
+                                </li>
+                                <li>
+                                  <h4><i class="fa fa-envelope"></i>Email</h4>
+                                  <p>spiceverse@gmail.com</p>
+                                  
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-                <div class="sign-up-htm">
-                    <div class="group">
-                        <label for="fname" class="label">First Name</label>
-                        <input id="fname" type="text" class="input">
+                <!-- .col-md-4 close -->
+                <div class="col-md-4">
+                    <div class="block wow fadeInLeft"  data-wow-delay="700ms">
+                        <h3>LATEST <span>BLOG POSTS</span></h3>
+                        <div class="blog">
+                            <ul>
+                                <li>
+                                    <h4><a href="#">Jun 8-2023</a></h4>
+                                    <p>Introducing SpiceVerse to the world</p>
+                                </li>
+                            </ul>                
+                        </div>
                     </div>
-                    <div class="group">
-                        <label for="lname" class="label">Last name</label>
-                        <input id="lname" type="text" class="input">
+                </div>
+                <!-- .col-md-4 close -->
+                <div class="col-md-4">
+                    <div class="block wow fadeInLeft"  data-wow-delay="1100ms">
+                        <div class="gallary">
+                            <h3>PHOTO <span>STREAM</span></h3>
+                            <ul>
+                                <li>
+                                    <a href="#"><img src="images/blog/together.jpg" width=50 height=50 alt=""></a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="images/blog/practical.jpg" width=50 height=50 alt=""></a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="images/blog/practical1.jpg"width=50 height=50  alt=""></a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="images/blog/girls.jpg"width=50 height=50  alt=""></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="social-media-link">
+                            <h3>Follow <span>US</span></h3>
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-twitter"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-facebook"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-dribbble"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-behance"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="group">
-                        <label for="sname" class="label">Spice Name</label>
-                        <input id="sname" type="text" class="input">
-                    </div>
-                    <div class="group">
-                        <label for="email" class="label">email</label>
-                        <input id="email" type="email" class="input">
-                    </div>
-                    <div class="group">
-                        <label for="price" class="label">Price</label>
-                        <input id="price" type="number" class="input">
-                    </div>
-                    <div class="group">
-                        <label for="pass" class="label">Password</label>
-                        <input id="pass" type="password" class="input">
-                    </div>
-                    <div class="group">
-                      <label for="cpass" class="label">Confirm Password</label>
-                      <input id="cpass" type="password" class="input">
-                  </div>
-                    <div class="group">
-                        <input type="submit" class="button" id ="register" value="Sign Up">
-                    </div>
-                    <div class="hr"></div>
-                    <div class="foot-lnk">
-                        <label for="tab-1">Already A Member?</a>
+                </div>
+                <!-- .col-md-4 close -->
+            </div><!-- .row close -->
+        </div><!-- .containe close -->
+    </section><!-- #footer close -->
+    <!--
+    footer-bottom  start
+    ============================= -->
+    <footer id="footer-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+                    <div class="block">
+                        <p>Copyright &copy; 2023 - All Rights Reserved. Design and Developed By Spiceverse</p>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</body>
-<script src="assets/plugins/jquery/jquery.min.js"></script>
-<!-- Bootstrap 4 -->
-<script src="assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-<!-- AdminLTE App -->
-<script src="assets/dist/js/adminlte.min.js"></script>
-<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-<script>
-     $(document).ready(function () {
-
-
-$('#Login').click(function (e) {
-  e.preventDefault();
-  var email = $('#emailLogin').val().trim();
-  var pword = $('#passlogin').val().trim();
-  if (email == "" || pword == "") {
-    swal({
-            text: "Input field cannot be empty",
-            icon: "error",
-          })
-  } else {
-    $.ajax({
-      method: 'GET',
-      url: 'backend/control/login.php',
-      data: {
-        email: email,
-        pword: pword
-      },
-      beforeSend: function () {
-        $('#Login').attr('disabled', true)
-        $('#Login').text('Logging...');
-      },
-      success: function (response) {
-        if (response == 200) {
-          $('#Login').attr('disabled', false);
-          $('#Login').text('Login');
-          swal({
-            text: "Login  Successful",
-            icon: "success",
-          }).then(function(){
-            window.location.href='farmers/dashboard.php'
-          })
-          
-        }else if(response==402){
-           $('#Login').attr('disabled', false);
-          $('#Login').text('Login');
-          swal({
-            text: "Incorrect Email",
-            icon: "error",
-          })
-        }else if(response==400){
-           $('#Login').attr('disabled', false);
-          $('#Login').text('Login');
-          swal({
-            text: "Incorrect Password",
-            icon: "error",
-          })
-        }else{
-          $('#Login').attr('disabled', false);
-          // swal({
-          //   text: "An error occured",
-          //   icon: "error",
-          // })
-          console.log(response)
-        }
-      },
-      error: function () {
-        $('#Login').attr('disabled', false);
-          swal({
-            text: "Check your internet connection",
-            icon: "error",
-          })
-      }
-    })
-  }
-
-})
-// Implement register
-$('#register').click(function (e) {
-        e.preventDefault();
-        var fname = $('#fname').val().trim();
-        var lname = $('#lname').val().trim();
-        var spice =$('#sname').val().trim();
-        var email = $('#email').val().trim();
-        var price=$('#price').val().trim();
-        var pword = $('#pass').val().trim();
-        var cpword = $('#cpass').val().trim();
-        if (fname == "" || lname == "" || spice == "" || email == "" || price == "" || cpword == "" || pword == "") {
-          swal({
-                  text: "Input field cannot be empty",
-                  icon: "error",
-                })
-        }else if(pword!==cpword){
-          swal({
-                  text: "Password does not Match",
-                  icon: "Warning",
-                })
-        } else {
-          $.ajax({
-            method: 'GET',
-            url: 'backend/control/register.php',
-            data: {
-              fname: fname,
-              lname: lname,
-              spice:spice,
-              email:email,
-              price:price,
-              pword:pword
-            },
-            beforeSend: function () {
-              $('#register').attr('disabled', true)
-              $('#register').text('Loading...');
-            },
-            success: function (response) {
-              if (response == 200) {
-                $('#register').attr('disabled', false);
-                $('#register').text('Register');
-                swal({
-                  text: "Registration Successful",
-                  icon: "success",
-                }).then(function(){
-                  window.location.href='farmers/dashboard.php'
-                })
-                
-              }else if (response==401){
-                $('#register').attr('disabled', false);
-                $('#register').text('Register');
-                swal({
-                  title:"Warning!!!",
-                  text: "Email already exist",
-                  icon: "warning",
-                })
-              }else{
-                $('#register').attr('disabled', false);
-                // swal({
-                //   text: "An error occured",
-                //   icon: "error",
-                // })
-                console.log(response)
-              }
-            },
-            error: function () {
-              $('#register').attr('disabled', false);
-                swal({
-                  text: "Check Your internet connection",
-                  icon: "error",
-                })
-            }
-          })
-        }
-
-      })
-})
-    </script>
+    </footer>
+	</body>
 </html>

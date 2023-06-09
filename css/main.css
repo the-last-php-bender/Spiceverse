@@ -723,8 +723,12 @@ padding:5px;
 border: none;
 border-bottom: 2px solid white;
 }
+tr{
+  height:60px;
+}
 tr:nth-child(even){
-  background-color: orangered;
+background-color:  orangered;
   color:white;
+
 }
 

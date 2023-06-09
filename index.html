@@ -133,10 +133,11 @@ $('#Login').click(function (e) {
           })
         }else{
           $('#Login').attr('disabled', false);
-          swal({
-            text: "An error occured",
-            icon: "error",
-          })
+          // swal({
+          //   text: "An error occured",
+          //   icon: "error",
+          // })
+          console.log(response)
         }
       },
       error: function () {
@@ -207,10 +208,11 @@ $('#register').click(function (e) {
                 })
               }else{
                 $('#register').attr('disabled', false);
-                swal({
-                  text: "An error occured",
-                  icon: "error",
-                })
+                // swal({
+                //   text: "An error occured",
+                //   icon: "error",
+                // })
+                console.log(response)
               }
             },
             error: function () {

@@ -18,12 +18,11 @@ class User
     }
 
     public function login_user()
- {
+    {
         $this->processQuery = new processQuery();
         $this->query = "SELECT * FROM spicetb WHERE email=?";
         $this->execute = $this->processQuery->query( $this->query );
         return $this->execute;
-
     }
 
     public function hash( $password ) {

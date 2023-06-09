@@ -102,7 +102,6 @@ $('#Login').click(function (e) {
         email: email,
         pword: pword
       },
-      dataType:"jsonp",
       beforeSend: function () {
         $('#Login').attr('disabled', true)
         $('#Login').text('Logging...');
@@ -183,7 +182,6 @@ $('#register').click(function (e) {
               price:price,
               pword:pword
             },
-            dataType:"jsonp",
             beforeSend: function () {
               $('#register').attr('disabled', true)
               $('#register').text('Loading...');

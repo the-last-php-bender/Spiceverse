@@ -1,6 +1,6 @@
 <?php
     session_start();
-    include 'backend/data/functions.php';
+    include '../backend/data/functions.php';
     if(!$_SESSION['email']){
       header('location:../index.html');
     }
@@ -29,22 +29,22 @@
         <!-- Responsive Stylesheet -->
 		<link rel="stylesheet" href="../css/responsive.css">
 		<!-- Js -->
-    <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+    <script src="../js/vendor/modernizr-2.6.2.min.js"></script>
     <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> -->
-    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
-    <script src="js/jquery.nav.js"></script>
-    <script src="js/jquery.sticky.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/plugins.js"></script>
-    <script src="js/wow.min.js"></script>
-    <script src="js/main.js"></script>
+    <script>window.jQuery || document.write('<script src="../js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+    <script src="../js/jquery.nav.js"></script>
+    <script src="../js/jquery.sticky.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/plugins.js"></script>
+    <script src="../js/wow.min.js"></script>
+    <script src="../js/main.js"></script>
 	</head>
 	<body>
 	<!--
 	header-img start 
 	============================== -->
-    <section id="hero-area">
-      <img class="img-responsive" src="../images/header.jpg" alt="">
+    <section id="hero-area" style="width:100%; height=100vh">
+      <img class="img-responsive" width=100% height=100% src="../images/header.jpg" alt="">
     </section>
 	<!--
     Header start 
@@ -138,7 +138,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="block">
-                        <img class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="400ms" style="border-radius: 50%;" src="images/blog/blog-img-2.jpg" alt="cooker-img">
+                        <img class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="400ms" style="border-radius: 50%;" src="../images/blog/blog-img-2.jpg" alt="cooker-img">
                         <h1 class="heading wow fadeInUp" data-wow-duration="400ms" data-wow-delay="500ms">No 1<span></span> </br> SpiceVerse <span>Company</span>
                         </h1>
                         <p class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="600ms">A Nigeria Company  Revolutionarizing the spice industry in Nigeria! </br> 
@@ -151,6 +151,9 @@
     blog start
     ============================ -->
     <section id="product">
+            <div class="title" >
+                <h3 style="text-align:center;color:white;">Our <span>Products</span></h3>
+            </div>
         <div class=main-container>
             <div class="img">
                 <img class="picture" src="../images/blog/blog-img-1.jpg" alt="Equipments">
@@ -320,16 +323,16 @@
                             <h3>PHOTO <span>STREAM</span></h3>
                             <ul>
                                 <li>
-                                    <a href="#"><img src="../images/photo/photo-1.jpg" alt=""></a>
+                                    <a href="#"><img src="../images/blog/together.jpg" width=50 height=50 alt=""></a>
                                 </li>
                                 <li>
-                                    <a href="#"><img src="../images/photo/photo-2.jpg" alt=""></a>
+                                    <a href="#"><img src="../images/blog/practical.jpg" width=50 height=50 alt=""></a>
                                 </li>
                                 <li>
-                                    <a href="#"><img src="../images/photo/photo-3.jpg" alt=""></a>
+                                    <a href="#"><img src="../images/blog/practical1.jpg"width=50 height=50  alt=""></a>
                                 </li>
                                 <li>
-                                    <a href="#"><img src="../images/photo/photo-4.jpg" alt=""></a>
+                                    <a href="#"><img src="../images/blog/girls.jpg"width=50 height=50  alt=""></a>
                                 </li>
                             </ul>
                         </div>

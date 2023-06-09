@@ -293,6 +293,7 @@ nav .block .navbar-default .navbar-nav > .active > a:hover:before {
   display:flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
 /*--
@@ -642,7 +643,8 @@ main{
 	width:100%;
 	display:flex;
 	align-items: center;
-	flex-direction: column;
+
+
 }
 .main-container{
 	margin-top:10px;
@@ -654,8 +656,9 @@ main{
 }
 .img{
 width:300px;
-height:400px;
+height:300px;
 margin-top:50px;
+margin-left:50px;
 box-shadow: 2px 2px 10px 2px black;	
 border-radius:10px;
 }

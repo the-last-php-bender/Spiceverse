@@ -3,12 +3,12 @@
 
 session_start();
 include "../data/functions.php";
-	$firstName=$_POST['fname'];
-	$lastName=$_POST['lname'];
-	$spice_name=$_POST['spice'];
-	$email=$_POST['email'];
-	$price=$_POST['price'];
-	$pword=$_POST['pword'];
+	$firstName=$_GET['fname'];
+	$lastName=$_GET['lname'];
+	$spice_name=$_GET['spice'];
+	$email=$_GET['email'];
+	$price=$_GET['price'];
+	$pword=$_GET['pword'];
 	if(empty($firstName)||empty($lastName)||empty($spice_name)||empty($email)||empty($price)||empty($pword)){
 		echo 404;
 	}else{

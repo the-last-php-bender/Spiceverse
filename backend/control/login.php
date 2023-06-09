@@ -1,8 +1,8 @@
 <?php
 session_start();
 include "../data/functions.php";
-	$email=$_POST['email'];
-	$password=$_POST['pword'];
+	$email=$_GET['email'];
+	$password=$_GET['pword'];
 	if(empty($email)||empty($password)){
 		echo 404;
 	}else{

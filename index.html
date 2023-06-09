@@ -96,7 +96,7 @@ $('#Login').click(function (e) {
           })
   } else {
     $.ajax({
-      method: 'POST',
+      method: 'GET',
       url: 'backend/control/login.php',
       data: {
         email: email,
@@ -174,7 +174,7 @@ $('#register').click(function (e) {
                 })
         } else {
           $.ajax({
-            method: 'POST',
+            method: 'GET',
             url: 'backend/control/register.php',
             data: {
               fname: fname,
